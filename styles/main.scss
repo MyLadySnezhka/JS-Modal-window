@@ -1,30 +1,55 @@
-.wrap, .root {
-    width: 1200px;
-    height: 800px;
-    margin: 10px auto;
+.gwrap, .root {
+    min-width: 1200px;
+    margin: 0 auto;
+    
 }
 
-.wrap {
-    
-    background-color: bisque;
+.gwrap {
+    position: relative;
+    height: 100vh;
 }
 
 .modal {
     display: none;
     width: 600px;
     height: 400px;
-    background-color: aquamarine;
+    background-color: orange;
+    border: 2px solid #fff;
+    border-radius: 5px;
     padding: 10px;
+    position: absolute;
+    left: 35%;
+    top: 30%;
 }
 
-.modal.show, .root.show {
+.btn_close {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.btn_OK {
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    
+}
+
+.show {
     display: block;
 }
 
-.root {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.285);
-    
+.shadow {
+    background-color: rgba(0, 0, 0, 0.481);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
 .modal_header {
@@ -36,5 +61,249 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90%;
+    height: 80%;
+}
+
+.modal_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav, .header, .search, .wrap {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    
+}
+
+
+.nav_line {
+    width: 100%;
+    background-color: lightgray;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_links {
+    height: 20px;
+    display: flex;
+    align-items: center;
+
+    & a {
+        color: grey;
+        text-decoration: none;
+        margin: 5px 20px;
+}
+}
+
+.auth a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.logo {
+    background-image: url(../images/logo2.gif);
+    height: 60px;
+    width: 210px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cart {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    & span {
+        color: gray;
+    }
+}
+
+.search_line {
+    width: 100%;
+    background-color: orange;
+}
+
+.search {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search_select {
+    background-color: orange;
+    height: 40px;
+    color: #fff;
+    width: 120px;
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+    &:hover {
+        color: orange;
+        background-color: #fff;
+        
+    }
+}
+
+.search_text {
+    width: 60%;
+    height: 40px;
+    padding: 10px;
+    outline: none;
+    box-sizing: border-box;
+    border: 0px;
+    border-radius: 5px;
+    color: gray;
+}
+
+.search_button {
+    width: 120px;
+    height: 40px;
+    background-color: orange;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    &:hover {
+        color: orange;
+        background-color: #fff;
+    }
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu {
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.menu_search {
+    color: gray;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.menu_item {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+.content {
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.content_menu {
+    color: #000;
+    & span {
+        color: gray;
+    }
+}
+
+.content_button_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont_but_type1 {
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid orange;
+    border-radius: 5px;
+}
+
+.cont_but_type2 {
+    width: 120px;
+    height: 40px;
+    background-color: orange;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.content_select {
+    height: 40px;
+    color:gray;
+    width: 150px;
+    padding: 5px;
+    margin: 10px 5px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.item_bd {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    & span {
+        font-size: 16px;
+        color: gray;
+        font-weight: normal;
+    }
+}
+
+.item_img {
+    background-image: url(../images/stoika.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 160px;
+    height: 120px;
+}
+
+.item_text {
+    width: 300px;
+    padding: 10px;
+}
+
+.item_price {
+    width: 100px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.buy {
+    text-align: right;
+}
+
+.cart_button {
+    width: 140px;
+    height: 40px;
+    background-color: orange;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px; 
+}
+
+.map a {
+    color: gray;
 }
