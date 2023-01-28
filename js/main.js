@@ -1,9 +1,11 @@
-const elBtn = document.querySelector('.cart_button');
 const elRoot = document.querySelector('.root');
 const elModal = document.querySelector('.modal');
 const elBtnClose = document.querySelector('button[name=btn_close]');
 const elBtnOK = document.querySelector('button[name=btn_OK]');
 const elItemBD = document.querySelector('.item_bd');
+const elModalBody = document.querySelector('.modal_items');
+const elBtnCart = document.querySelector('.cart_button');
+const elBuy = document.querySelector('.buy');
 
 //let menu_item = [];
 
@@ -55,14 +57,20 @@ const renderProduct = () => {
         return _html;
     }).join('');
 
-    elItemBD.innerHTML = html;  
+    elItemBD.innerHTML = html;
 };
 
+const modalCartRender = () => {
+    const html = products.map((item) => {
+        const _html = `
+            <h3>${item.name}</h3>
+            ${item.price}
+        `
+        return _html;
+    }).join('');
 
-elBtn.addEventListener('click', () => {
-    elModal.classList.add('show');
-    elRoot.classList.add('shadow');
-});
+    elModalBody.innerHTML = html;  
+};
 
 const btn_close = () => {
     elModal.classList.remove('show');
@@ -76,6 +84,12 @@ elBtnClose.addEventListener('click', () => {
 
 elBtnOK.addEventListener('click', () => {
     btn_close();
+});
+
+elBtnCart.addEventListener('click', () => {
+    elModal.classList.add('show');
+    elRoot.classList.add('shadow');
+    modalCartRender();
 });
 
 renderProduct();
