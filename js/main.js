@@ -86,7 +86,7 @@ elBtnOK.addEventListener('click', () => {
     btn_close();
 });
 
-elBtnCart.addEventListener('click', () => {
+elBtnCart.addEventListener('click', (ev) => {
     elModal.classList.add('show');
     elRoot.classList.add('shadow');
     modalCartRender();
