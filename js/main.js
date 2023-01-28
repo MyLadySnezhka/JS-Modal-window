@@ -17,6 +17,7 @@ let products = [
         model: '900210-АБ-18 - Toyota',
         price: 450,
         stock: 'В наличии',
+        adress: 'Киев, Индустриальная, 47',
     },
 
     {
@@ -26,6 +27,7 @@ let products = [
         model: '900210-АБ-18 - Toyota',
         price: 550,
         stock: 'Под заказ',
+        adress: 'Одесса, Промышленная, 5'
     },
 
     {
@@ -35,6 +37,7 @@ let products = [
         model: '900210-АБ-18 - Toyota',
         price: 350,
         stock: 'Нет на складе',
+        adress: 'Львов, пл. Рынок, 23'
     },
 
 ];
@@ -50,7 +53,7 @@ const renderProduct = () => {
             </div>    
             <div class="item_price">${item.price}<br><span>${item.stock}</span></div>
             <div class="buy">
-                <p class="map"><a href="#"><i class="fa-solid fa-location-dot"></i> Киев, Индустриальная, 47</a></p>
+                <p class="map"><a href="#"><i class="fa-solid fa-location-dot"></i> ${item.adress}</a></p>
                 <button type="button" class="cart_button"><i class="fa-solid fa-cart-plus"></i> В корзину</button>
             </div>
         `
