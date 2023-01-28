@@ -63,8 +63,10 @@ const renderProduct = () => {
 const modalCartRender = () => {
     const html = products.map((item) => {
         const _html = `
+            <div>
             <h3>${item.name}</h3>
             ${item.price}
+            </div>
         `
         return _html;
     }).join('');
